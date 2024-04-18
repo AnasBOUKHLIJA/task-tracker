@@ -5,10 +5,14 @@ node_modules/
 .DS_Store
 Thumbs.db
 
+
 # Editor settings
 .vscode/
 .idea/
 *.sublime-workspace
+task-tracker-backend/.settings
+task-tracker-backend/.classpath
+task-tracker-backend/.project
 
 # Operating system generated files
 ehthumbs.db
