@@ -1,0 +1,85 @@
+# General
+*.log
+*.cache
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Operating system generated files
+ehthumbs.db
+Icon?
+
+# Dependency directories
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+target/
+*.tsbuildinfo
+
+# Compiled Java class files
+task-tracker-api/**/*.class
+
+# Package lock files
+package-lock.json
+yarn.lock
+
+# Maven wrapper files (Spring app specific)
+task-tracker-api/.mvn/wrapper/maven-wrapper.jar
+task-tracker-api/.mvn/wrapper/maven-wrapper.properties
+task-tracker-api/.mvn/wrapper/MavenWrapperDownloader.java
+
+# Maven generated files (Spring app specific)
+task-tracker-api/target/
+task-tracker-api/pom.xml.tag
+task-tracker-api/pom.xml.releaseBackup
+task-tracker-api/pom.xml.versionsBackup
+task-tracker-api/pom.xml.next
+
+# Next.js specific
+task-tracker/.next/
+task-tracker/out/
+task-tracker/.vercel/
+task-tracker/vercel.json
+task-tracker/public/vercel.svg
+
+# Logs
+task-tracker-api/logs/
+task-tracker-api/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE specific files
+task-tracker/*.iml
+task-tracker-api/*.iml
+task-tracker-api/.idea/
+task-tracker/.idea/
+*.swp
+*.swo
+
+# Local development
+task-tracker/.env.local
+task-tracker/.env.development.local
+task-tracker/.env.test.local
+task-tracker-api/.env.local
+task-tracker-api/.env.development.local
+task-tracker-api/.env.test.local
+
+# Configuration files
+# Uncomment the following if you do not wish to track configuration in Git
+# task-tracker/postcss.config.js
+# task-tracker/tailwind.config.js
+# task-tracker/tsconfig.json
+# task-tracker-api/src/main/resources/application.properties
+# task-tracker-api/src/main/resources/application.yml
+
+# Serialized data files
+*.ser
