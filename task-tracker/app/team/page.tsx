@@ -5,7 +5,7 @@ import { title } from "@/components/primitives";
 import { User } from "@/models/User";
 import { UserService } from "@/services/UserService";
 import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
-import { Table, TableBody, TableCell, TableColumn, TableHeader, TableRow, getKeyValue } from "@nextui-org/react";
+import { Button, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow, getKeyValue } from "@nextui-org/react";
 
 const columns = [
 	{
@@ -24,29 +24,51 @@ const columns = [
 		key: "email",
 		label: "Email",
 	},
-  ];
-  
+	{
+		key: "action",
+		label: "",
+	},
+];
+
 export default function TeamPage() {
 
 	const [users, setUsers] = useState<User[]>([]);
+	const [indice, setIndice] = useState(0);
 
 	useEffect(() => {
 		UserService.getAllUsers().then((response) => {
 			setUsers(response);
 		});
-	}, []);
+	}, [indice]);
+
+	const handleDelete = (id: number) => {
+		UserService.deleteUser(id).catch((error) => {
+			console.error("Error deleting user:", error);
+		});
+		setIndice((prevIndice) => prevIndice + 1);			
+	};
 
 	return (
 		<div className="w-full">
-			<h1 className={`${title()} py-5`}>Team members</h1>	
-			<Table  aria-label="Example table with dynamic content">
+			<h1 className={`${title()} py-5`}>Team members</h1>
+			<Table aria-label="Example table with dynamic content">
 				<TableHeader columns={columns}>
-					{(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
+					{columns.map((column) =>
+						<TableColumn key={column.key}>{column.label}</TableColumn>
+					)}
 				</TableHeader>
-				<TableBody items={users}>
-					{(item) => (
-						<TableRow className="text-left" key={item.id}>
-							{(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
+				<TableBody>
+					{users.map((user) =>
+						<TableRow key={user.id}>
+							<TableCell>{user.firstName}</TableCell>
+							<TableCell>{user.lastName}</TableCell>
+							<TableCell>{user.username}</TableCell>
+							<TableCell>{user.email}</TableCell>
+							<TableCell>
+								<Button onClick={() => handleDelete(user.id)} className="text-tiny" variant="flat" color="danger" radius="lg" size="sm">
+									delete
+								</Button>
+							</TableCell>
 						</TableRow>
 					)}
 				</TableBody>
