@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "9b1eafda-0176-4dbb-9471-876f84acc66b",
+		"name": "Project_task_tacker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28598866"
+	},
+	"item": [
+		{
+			"name": "user/createList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"firstName\": \"Anas\",\n        \"lastName\": \"BOUKHLIJA\",\n        \"username\": \"anas.boukhlija\",\n        \"email\": \"anasboukhlijapro@gmail.com\",\n        \"password\": \"azerty@abk\"\n    },\n    {\n        \"firstName\": \"Mohammed\",\n        \"lastName\": \"Oussiddi\",\n        \"username\": \"mohammed.oussiddi\",\n        \"email\": \"m.oussiddi@gamil.com\",\n        \"password\": \"azerty@mo\"\n    },\n    {\n        \"firstName\": \"Mohamed Yassine\",\n        \"lastName\": \"Faida\",\n        \"username\": \"mohamed.yassin.faida\",\n        \"email\": \"mohamedyassinefaida@gmail.com\",\n        \"password\": \"azerty@myf\"\n    },\n    {\n        \"firstName\": \"El Mahdi\",\n        \"lastName\": \"Atmani\",\n        \"username\": \"el.mahdi.atmani\",\n        \"email\": \"el.mahdi.atmani@gmail.com\",\n        \"password\": \"azerty@ema\"\n    }\n]\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/user/createList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"user",
+						"createList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"User1\",\n    \"email\": \"user1@example.com\",\n    \"password\": \"password1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/getById/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/user/getById/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"user",
+						"getById",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/user/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"user",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 1,\n        \"username\": \"User1\",\n        \"email\": \"user1@example.comZZZ\",\n        \"password\": \"password1\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/user/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"user",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/user/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"user",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project/getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/project/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"project",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Project XXXX\",\n    \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n    \"createdBy\": {\n        \"id\": 3,\n        \"firstName\": \"Mohamed Yassin\",\n        \"lastName\": \"Faida\",\n        \"username\": \"mohamed.yassin.faida\",\n        \"email\": \"mohamedyassinefaida@gmail.com\",\n        \"password\": \"azerty@myf\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/project/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"project",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project/createList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Student Management system\",\n        \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"firstName\": \"Anas\",\n            \"lastName\": \"BOUKHLIJA\",\n            \"username\": \"anas.boukhlija\",\n            \"email\": \"anasboukhlijapro@gmail.com\",\n            \"password\": \"azerty@abk\"\n        }\n    },\n    {\n        \"name\": \"Task tracker\",\n        \"description\": \"A tool for tracking tasks, assignments, and projects, facilitating collaboration and organization within teams.\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"firstName\": \"Anas\",\n            \"lastName\": \"BOUKHLIJA\",\n            \"username\": \"anas.boukhlija\",\n            \"email\": \"anasboukhlijapro@gmail.com\",\n            \"password\": \"azerty@abk\"\n        }\n    }\n]\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/project/createList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"project",
+						"createList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project/getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/project/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"project",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task/feature/createList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"User Authentication\",\n        \"description\": \"Implement user authentication functionality using JWT tokens.\",\n        \"status\": \"ToDo\",\n        \"assignedTo\": {\n            \"id\": 1,\n            \"firstName\": \"Anas\",\n            \"lastName\": \"BOUKHLIJA\",\n            \"username\": \"anas.boukhlija\",\n            \"email\": \"anasboukhlijapro@gmail.com\",\n            \"password\": \"azerty@abk\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"priority\": \"High\",\n        \"acceptanceCriteria\": \"Users can register, login, and access protected resources.\"\n    },\n    {\n        \"name\": \"Email Notifications\",\n        \"description\": \"Set up email notifications for user actions such as password reset and account activation.\",\n        \"status\": \"InProgress\",\n        \"assignedTo\": {\n            \"id\": 2,\n            \"firstName\": \"Mohammed\",\n            \"lastName\": \"Oussiddi\",\n            \"username\": \"mohammed.oussiddi\",\n            \"email\": \"m.oussiddi@gamil.com\",\n            \"password\": \"azerty@mo\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"priority\": \"Medium\",\n        \"acceptanceCriteria\": \"Users receive email notifications for specified actions with correct content.\"\n    },\n    {\n        \"name\": \"Profile Management\",\n        \"description\": \"Create user profile pages where users can update their information and settings.\",\n        \"status\": \"ToDo\",\n        \"assignedTo\": {\n            \"id\": 3,\n            \"firstName\": \"Mohamed Yassin\",\n            \"lastName\": \"Faida\",\n            \"username\": \"mohamed.yassin.faida\",\n            \"email\": \"mohamedyassinefaida@gmail.com\",\n            \"password\": \"azerty@myf\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"priority\": \"High\",\n        \"acceptanceCriteria\": \"Users can view and edit their profile information with validation checks.\"\n    },\n    {\n        \"name\": \"File Upload\",\n        \"description\": \"Allow users to upload files such as images and documents to the system.\",\n        \"status\": \"InProgress\",\n        \"assignedTo\": {\n            \"id\": 4,\n            \"firstName\": \"El Mahdi\",\n            \"lastName\": \"Atmani\",\n            \"username\": \"el.mahdi.atmani\",\n            \"email\": \"el.mahdi.atmani@gmail.com\",\n            \"password\": \"azerty@ema\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"priority\": \"Medium\",\n        \"acceptanceCriteria\": \"Users can upload files with specified file formats and size limits.\"\n    },\n    {\n        \"name\": \"Search Functionality\",\n        \"description\": \"Implement a search feature to allow users to search for specific content within the system.\",\n        \"status\": \"InProgress\",\n        \"assignedTo\": {\n            \"id\": 1,\n            \"firstName\": \"Anas\",\n            \"lastName\": \"BOUKHLIJA\",\n            \"username\": \"anas.boukhlija\",\n            \"email\": \"anasboukhlijapro@gmail.com\",\n            \"password\": \"azerty@abk\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"priority\": \"Medium\",\n        \"acceptanceCriteria\": \"Users can search for content by keyword and filter search results.\"\n    },\n    {\n        \"name\": \"Data Export\",\n        \"description\": \"Provide functionality to export data from the system in various formats such as CSV and PDF.\",\n        \"status\": \"ToDo\",\n        \"assignedTo\": {\n            \"id\": 2,\n            \"firstName\": \"Mohammed\",\n            \"lastName\": \"Oussiddi\",\n            \"username\": \"mohammed.oussiddi\",\n            \"email\": \"m.oussiddi@gamil.com\",\n            \"password\": \"azerty@mo\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"priority\": \"Low\",\n        \"acceptanceCriteria\": \"Users can export data from specified sections of the system with customizable options.\"\n    },\n    {\n        \"name\": \"Analytics Dashboard\",\n        \"description\": \"Create a dashboard to visualize key metrics and analytics data.\",\n        \"status\": \"ToDo\",\n        \"assignedTo\": {\n            \"id\": 1,\n            \"firstName\": \"Anas\",\n            \"lastName\": \"BOUKHLIJA\",\n            \"username\": \"anas.boukhlija\",\n            \"email\": \"anasboukhlijapro@gmail.com\",\n            \"password\": \"azerty@abk\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"priority\": \"Medium\",\n        \"acceptanceCriteria\": \"Users can view charts and graphs representing data from different areas of the system.\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/task/feature/createList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"task",
+						"feature",
+						"createList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task/bug/createList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Bug 1\",\n        \"description\": \"This is the first bug task\",\n        \"status\": \"New\",\n        \"createdAt\": \"2024-04-18T12:00:00Z\",\n        \"assignedTo\": {\n            \"id\": 1,\n            \"firstName\": \"Anas\",\n            \"lastName\": \"BOUKHLIJA\",\n            \"username\": \"anas.boukhlija\",\n            \"email\": \"anasboukhlijapro@gmail.com\",\n            \"password\": \"azerty@abk\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"severity\": \"Critical\",\n        \"stepsToReproduce\": \"1. Open the application\\n2. Click on the 'Submit' button\\n3. See the error message\"\n    },\n    {\n        \"name\": \"Bug 2\",\n        \"description\": \"This is the second bug task\",\n        \"status\": \"In Progress\",\n        \"createdAt\": \"2024-04-18T12:30:00Z\",\n        \"assignedTo\": {\n            \"id\": 1,\n            \"firstName\": \"Anas\",\n            \"lastName\": \"BOUKHLIJA\",\n            \"username\": \"anas.boukhlija\",\n            \"email\": \"anasboukhlijapro@gmail.com\",\n            \"password\": \"azerty@abk\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"severity\": \"Major\",\n        \"stepsToReproduce\": \"1. Log in to the system\\n2. Navigate to the 'Settings' page\\n3. Observe the layout issue\"\n    },\n    {\n        \"name\": \"Bug 3\",\n        \"description\": \"This is the third bug task\",\n        \"status\": \"Resolved\",\n        \"createdAt\": \"2024-04-18T13:00:00Z\",\n        \"assignedTo\": {\n            \"id\": 1,\n            \"firstName\": \"Anas\",\n            \"lastName\": \"BOUKHLIJA\",\n            \"username\": \"anas.boukhlija\",\n            \"email\": \"anasboukhlijapro@gmail.com\",\n            \"password\": \"azerty@abk\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"severity\": \"Minor\",\n        \"stepsToReproduce\": \"1. Open the application\\n2. Navigate to the 'Help' section\\n3. Notice the typo in the text\"\n    },\n    {\n        \"name\": \"Bug 4\",\n        \"description\": \"This is the fourth bug task\",\n        \"status\": \"New\",\n        \"createdAt\": \"2024-04-18T13:30:00Z\",\n        \"assignedTo\": {\n            \"id\": 1,\n            \"firstName\": \"Anas\",\n            \"lastName\": \"BOUKHLIJA\",\n            \"username\": \"anas.boukhlija\",\n            \"email\": \"anasboukhlijapro@gmail.com\",\n            \"password\": \"azerty@abk\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"severity\": \"Critical\",\n        \"stepsToReproduce\": \"1. Click on the 'Add' button\\n2. Enter invalid data\\n3. Observe the validation error\"\n    },\n    {\n        \"name\": \"Bug 5\",\n        \"description\": \"This is the fifth bug task\",\n        \"status\": \"In Progress\",\n        \"createdAt\": \"2024-04-18T14:00:00Z\",\n        \"assignedTo\": {\n            \"id\": 1,\n            \"firstName\": \"Anas\",\n            \"lastName\": \"BOUKHLIJA\",\n            \"username\": \"anas.boukhlija\",\n            \"email\": \"anasboukhlijapro@gmail.com\",\n            \"password\": \"azerty@abk\"\n        },\n        \"project\": {\n            \"id\": 1,\n            \"name\": \"Student Management system\",\n            \"description\": \"A comprehensive system for managing students' information, including enrollment, grades, and more.\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"firstName\": \"Anas\",\n                \"lastName\": \"BOUKHLIJA\",\n                \"username\": \"anas.boukhlija\",\n                \"email\": \"anasboukhlijapro@gmail.com\",\n                \"password\": \"azerty@abk\"\n            }\n        },\n        \"severity\": \"Major\",\n        \"stepsToReproduce\": \"1. Navigate to the 'Reports' section\\n2. Select a date range\\n3. View the generated report\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/task/bug/createList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"task",
+						"bug",
+						"createList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task/getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task-tracker/api/v1/task/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task-tracker",
+						"api",
+						"v1",
+						"task",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
