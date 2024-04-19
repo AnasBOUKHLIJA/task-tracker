@@ -30,6 +30,10 @@ public class Comment implements Serializable {
     @JoinColumn(name = "author_id")
     private User author;
     
+    @ManyToOne
+    @JoinColumn(name = "task_id")
+    private Task task;
+    
 	//--------------------------------------------------------------------------------------
 	// GETTERS AND SETTERS
 	//--------------------------------------------------------------------------------------
@@ -37,7 +41,6 @@ public class Comment implements Serializable {
 	public Long getId() {
 		return id;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -45,7 +48,6 @@ public class Comment implements Serializable {
 	public String getContent() {
 		return content;
 	}
-
 	public void setContent(String content) {
 		this.content = content;
 	}
@@ -53,7 +55,6 @@ public class Comment implements Serializable {
 	public Date getCreatedAt() {
 		return createdAt;
 	}
-
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
 	}
@@ -61,11 +62,17 @@ public class Comment implements Serializable {
 	public User getAuthor() {
 		return author;
 	}
-
 	public void setAuthor(User author) {
 		this.author = author;
 	}
-	
+
+	public Task getTask() {
+		return task;
+	}
+	public void setTask(Task task) {
+		this.task = task;
+	}
+
 	private static final long serialVersionUID = 1L;
     
 }

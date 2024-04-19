@@ -14,7 +14,8 @@ public class UserController {
     
     @GetMapping("/getAll")
     public List<User> getAllUsers() {
-        return userDao.findAll();
+    	List<User> users = userDao.findAll();
+        return users;
     }
     
     @GetMapping("/getById/{id}")

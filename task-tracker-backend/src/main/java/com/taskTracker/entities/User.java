@@ -31,7 +31,6 @@ public class User implements Serializable {
     
 	@Column(name = "password")
     private String password;
-	
 	//--------------------------------------------------------------------------------------
 	// GETTERS AND SETTERS
 	//--------------------------------------------------------------------------------------
@@ -77,7 +76,7 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	private static final long serialVersionUID = 1L;
 
 }

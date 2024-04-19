@@ -9,11 +9,6 @@
         <!-- Specify the JPA provider -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-<!-- 		<class>entities.User</class> -->
-<!-- 		<class>entities.Project</class> -->
-<!-- 		<class>entities.Comment</class> -->
-<!-- 		<class>entities.Task</class> -->
-
         <!-- Specify the datasource properties for Oracle -->
         <properties>
             <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>

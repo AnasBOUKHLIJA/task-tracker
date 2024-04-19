@@ -24,7 +24,8 @@ public class ProjectController {
     
     @GetMapping("/getAll")
     public List<Project> getAllProjects() {
-        return projectDao.findAll();
+    	List<Project> projects = projectDao.findAll();
+        return projects;
     }
     
     @GetMapping("/getById/{id}")
